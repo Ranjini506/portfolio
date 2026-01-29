@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>I. Ranjini | Portfolio Resume</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+
+/* BACKGROUND */
+body{
+ min-height:100vh;
+ background:
+ linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.85)),
+ url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d");
+ background-size:cover;
+ background-attachment:fixed;
+ color:#fff
+}
+
+/* HEADER */
+header{text-align:center;padding:50px 20px}
+header h1{font-size:42px}
+
+/* NAV */
+nav{
+ display:flex;justify-content:center;flex-wrap:wrap;
+ gap:14px;padding:18px;
+ background:rgba(255,255,255,.15);
+ backdrop-filter:blur(12px)
+}
+nav button{
+ border:none;padding:12px 28px;border-radius:30px;
+ background:#fff;color:#000;font-weight:600;
+ cursor:pointer;transition:.3s
+}
+nav button:hover{transform:scale(1.08)}
+
+/* SLIDES */
+.container{position:relative;min-height:560px}
+.slide{
+ position:absolute;width:100%;
+ opacity:0;transform:translateY(40px);
+ transition:.6s;pointer-events:none
+}
+.slide.active{opacity:1;transform:translateY(0);pointer-events:auto}
+
+/* CARD */
+.card{
+ max-width:850px;margin:50px auto;
+ padding:45px;border-radius:28px;text-align:center
+}
+
+/* STYLES */
+.about-card{background:#000}
+.project-card{background:#fff;color:#000}
+
+/* EDUCATION – OLD SIMPLE STYLE */
+.edu-simple{
+ background:rgba(255,255,255,.12);
+ backdrop-filter:blur(15px);
+}
+.edu-simple ul{
+ list-style:none;
+ margin-top:20px
+}
+.edu-simple li{
+ padding:14px;margin-bottom:12px;
+ background:rgba(0,0,0,.4);
+ border-radius:16px
+}
+
+/* SKILLS */
+.skills-card{background:rgba(255,255,255,.12);backdrop-filter:blur(18px)}
+.skill{text-align:left;margin-bottom:18px}
+.skill span{display:flex;justify-content:space-between}
+.bar{height:10px;background:rgba(255,255,255,.3);border-radius:10px}
+.bar div{
+ height:100%;
+ background:linear-gradient(90deg,#00f7ff,#c300ff);
+ border-radius:10px
+}
+
+/* EXPERIENCE */
+.exp-circles{display:flex;justify-content:center;gap:20px;flex-wrap:wrap}
+.circle{
+ width:180px;height:180px;border-radius:50%;
+ background:radial-gradient(circle at top,#89f7fe,#2575fc);
+ display:flex;align-items:center;justify-content:center;
+ text-align:center;box-shadow:0 20px 40px rgba(0,0,0,.4)
+}
+
+/* CERTIFICATIONS – DIFFERENT TIMELINE STYLE */
+.timeline{
+ max-width:600px;margin:30px auto;position:relative
+}
+.timeline::before{
+ content:"";position:absolute;left:50%;
+ width:4px;height:100%;background:#fff;transform:translateX(-50%)
+}
+.time-item{
+ width:50%;padding:15px 25px;position:relative
+}
+.time-item.left{left:0;text-align:right}
+.time-item.right{left:50%}
+.time-item::before{
+ content:"";position:absolute;top:20px;
+ width:14px;height:14px;border-radius:50%;
+ background:#00f7ff
+}
+.time-item.left::before{right:-7px}
+.time-item.right::before{left:-7px}
+.time-box{
+ background:rgba(255,255,255,.18);
+ backdrop-filter:blur(12px);
+ padding:15px;border-radius:15px
+}
+
+/* CONTACT */
+.contact-wrap{background:#000;padding:40px;border-radius:30px}
+.contact-card{
+ background:#fff;color:#000;
+ padding:35px;border-radius:25px
+}
+
+footer{text-align:center;padding:18px;opacity:.85}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>I. Ranjini</h1>
+<p>3rd Year BCA Student</p>
+</header>
+
+<nav>
+<button onclick="showSlide('about')">About</button>
+<button onclick="showSlide('education')">Education</button>
+<button onclick="showSlide('skills')">Skills</button>
+<button onclick="showSlide('experience')">Experience</button>
+<button onclick="showSlide('project')">Project</button>
+<button onclick="showSlide('certifications')">Certifications</button>
+<button onclick="showSlide('contact')">Contact</button>
+</nav>
+
+<div class="container">
+
+<!-- ABOUT -->
+<div id="about" class="slide active">
+<div class="card about-card">
+<h2>About Me</h2>
+<p>I’m <b>I. Ranjini</b>, a passionate BCA student interested in web development and UI design.</p>
+</div>
+</div>
+
+<!-- EDUCATION (OLD STYLE) -->
+<div id="education" class="slide">
+<div class="card edu-simple">
+<h2>Education</h2>
+<ul>
+<li>🏫 Gandhi Memorial Hr. Sec. School</li>
+<li>📍 Thiruvennainallur</li>
+</ul>
+</div>
+</div>
+
+<!-- SKILLS -->
+<div id="skills" class="slide">
+<div class="card skills-card">
+<h2>Skills</h2>
+<div class="skill"><span><b>HTML</b><b>90%</b></span><div class="bar"><div style="width:90%"></div></div></div>
+<div class="skill"><span><b>CSS</b><b>85%</b></span><div class="bar"><div style="width:85%"></div></div></div>
+<div class="skill"><span><b>JavaScript</b><b>75%</b></span><div class="bar"><div style="width:75%"></div></div></div>
+<div class="skill"><span><b>Python</b><b>70%</b></span><div class="bar"><div style="width:70%"></div></div></div>
+</div>
+</div>
+
+<!-- EXPERIENCE -->
+<div id="experience" class="slide">
+<div class="card">
+<h2>Experience</h2>
+<div class="exp-circles">
+<div class="circle">Cloudlogic Software<br>Pondicherry</div>
+<div class="circle">Nexygon Company<br>Pondicherry</div>
+<div class="circle">8 Queens Software<br>Chennai</div>
+</div>
+</div>
+</div>
+
+<!-- PROJECT -->
+<div id="project" class="slide">
+<div class="card project-card">
+<h2>Project</h2>
+<p><b>Neuro Assist – AI & AR Powered Virtual Memory Solution</b></p>
+</div>
+</div>
+
+<!-- CERTIFICATIONS – DIFFERENT -->
+<div id="certifications" class="slide">
+<div class="card skills-card">
+<h2>Certifications</h2>
+<div class="timeline">
+<div class="time-item left"><div class="time-box">🏆 National Conference</div></div>
+<div class="time-item right"><div class="time-box">🌐 Cisco Academy</div></div>
+<div class="time-item left"><div class="time-box">🍃 MongoDB</div></div>
+<div class="time-item right"><div class="time-box">💡 IBM Magic Bus</div></div>
+<div class="time-item left"><div class="time-box">🚀 Learnathon</div></div>
+<div class="time-item right"><div class="time-box">🖥 Microsoft</div></div>
+</div>
+</div>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="slide">
+<div class="contact-wrap">
+<div class="contact-card">
+<h2>Contact</h2>
+<p>📞 7845318701</p>
+<p>📧 iranjini506@gmail.com</p>
+<a href="https://www.linkedin.com/in/i-ranjini-282767320" target="_blank">🔗 LinkedIn Profile</a>
+</div>
+</div>
+</div>
+
+</div>
+
+<footer>© 2025 I. Ranjini | Portfolio Resume</footer>
+
+<script>
+function showSlide(id){
+ document.querySelectorAll('.slide').forEach(s=>s.classList.remove('active'))
+ document.getElementById(id).classList.add('active')
+}
+</script>
+
+</body>
+</html>
